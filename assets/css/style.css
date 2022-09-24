@@ -1,0 +1,49 @@
+:root {
+    --background-color: beige;
+    --header-background-color: navy;
+    --header-text-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+header {
+    height: 100px;
+    width: 100vw;
+
+    background-color: var(--header-background-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 52px;
+
+    color: white;
+}
+
+nav {
+    width: 50%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1em;
+
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+
+    color: white;
+}
