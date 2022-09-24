@@ -38,7 +38,7 @@ h1 {
     color: white;
 }
 
-nav {
+header nav {
     width: 50%;
 
     /* The navigation bar is positioned on the right side of the header */
@@ -46,21 +46,24 @@ nav {
     justify-content: flex-end;
 }
 
-nav ul {
+header nav ul {
     /* The nav links appear horizontally instead of vertically */
     display: flex;
 }
 
-nav ul li {
+header nav ul li {
     /*  There needs to be a space in between each link in the navigation bar or it looks weird */
     margin-right: 1em;
 
     font-size: 24px;
 }
 
+/* All links on this page won't be underlined */
 a {
     text-decoration: none;
+}
 
+header a {
     color: white;
 }
 
@@ -97,6 +100,11 @@ main {
 }
 
 #work {
+    display: flex;
+    flex-direction: row;
+}
+
+#contact-me {
     display: flex;
     flex-direction: row;
 }
@@ -167,4 +175,20 @@ h3 {
 
 .project-header p {
     margin: 5px;
+}
+
+#contact-me-content ul {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#contact-me-content ul li {
+    font-size: 24px;
+}
+
+#contact-me-content a {
+    color: var(--section-header-color);
 }
