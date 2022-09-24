@@ -3,6 +3,12 @@
     --header-background-color: navy;
     --header-text-color: white;
     --section-header-color: navy;
+    --work-border-color: navy;
+    --work-subheader-text-color: white;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -16,12 +22,18 @@ header {
     background-color: var(--header-background-color);
 
     display: flex;
+
+    /* 
+     *  The first item in the header - the <h1> header - is positioned on the start line and
+     *  the last item - the nav bar - is being placed on the end line.
+     */
     justify-content: space-between;
     align-items: center;
 }
 
 h1 {
     font-size: 52px;
+    font-weight: bold;
 
     color: white;
 }
@@ -29,15 +41,18 @@ h1 {
 nav {
     width: 50%;
 
+    /* The navigation bar is positioned on the right side of the header */
     display: flex;
     justify-content: flex-end;
 }
 
 nav ul {
+    /* The nav links appear horizontally instead of vertically */
     display: flex;
 }
 
 nav ul li {
+    /*  There needs to be a space in between each link in the navigation bar or it looks weird */
     margin-right: 1em;
 
     font-size: 24px;
@@ -69,6 +84,7 @@ a {
 
 h2 {
     font-size: 36px;
+    font-weight: bold;
 }
 
 main {
@@ -80,6 +96,11 @@ main {
     flex-direction: row;
 }
 
+#work {
+    display: flex;
+    flex-direction: row;
+}
+
 .section-header {
     width: 25%;
 
@@ -87,7 +108,7 @@ main {
     padding: 10px;
 
     color: var(--section-header-color);
-    border-right: solid var(--section-header-color);
+    border-right: thick solid var(--section-header-color);
 
     display: flex;
     justify-content: flex-end;
@@ -98,4 +119,52 @@ main {
 
     margin: 10px;
     padding: 10px;
+}
+
+#work-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 48%;
+
+    margin: 1%;
+
+    border: thick solid var(--work-border-color);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+#horiseon-refactor-card {
+    flex-basis: 100%;
+
+    /* I want the top to be flush with the "Work" Header */
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+
+    margin: 5px;
+}
+
+.project-header {
+    width: max-content;
+
+    padding: 10px;
+
+    /* I want the project subheader - the name of the project and the languages it uses - to display over the image of the project */
+    transform: translate(0, -150%);
+
+    background-color: var(--work-border-color);
+    color: var(--work-subheader-text-color);
+}
+
+.project-header p {
+    margin: 5px;
 }
