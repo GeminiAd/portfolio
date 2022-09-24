@@ -2,6 +2,7 @@
     --background-color: beige;
     --header-background-color: navy;
     --header-text-color: white;
+    --section-header-color: navy;
 }
 
 body {
@@ -64,4 +65,37 @@ a {
     display: block;
     object-fit: cover;
     width: 100%;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+main {
+    width: 100vw;
+}
+
+#about-me {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-header {
+    width: 25%;
+
+    margin: 10px;
+    padding: 10px;
+
+    color: var(--section-header-color);
+    border-right: solid var(--section-header-color);
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section-content {
+    width: 75%;
+
+    margin: 10px;
+    padding: 10px;
 }
