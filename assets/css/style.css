@@ -17,7 +17,7 @@ body {
 
 header {
     height: 100px;
-    width: 100vw;
+    width: 100%;
 
     background-color: var(--header-background-color);
 
@@ -91,7 +91,7 @@ h2 {
 }
 
 main {
-    width: 100vw;
+    width: 100%;
 }
 
 #about-me {
@@ -148,7 +148,7 @@ main {
 }
 
 #horiseon-refactor-card {
-    flex-basis: 100%;
+    width: 98%;
 
     /* I want the top to be flush with the "Work" Header */
     margin-top: 0;
