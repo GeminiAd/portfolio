@@ -197,11 +197,29 @@ main {
     filter: brightness(1);
 }
 
-#horiseon-refactor-card {
+/* The main card is displayed at the top and is larger than the other application cards */
+.main-card {
     width: 98%;
+
+    margin: 1%;
 
     /* I want the top to be flush with the "Work" Header */
     margin-top: 0;
+
+    border: thick solid var(--header-text-background-color);
+}
+
+.main-card img {
+    width: 100%;
+    height: 100%;
+
+    filter: brightness(60%);
+
+    transition: filter 1s;
+}
+
+.main-card img:hover {
+    filter: brightness(1);
 }
 
 h3 {
@@ -241,4 +259,22 @@ h3 {
 
 #contact-me-content a {
     color: var(--header-background-color);
+}
+
+/* Display for tablets */
+@media screen and (max-width: 992px) {
+    .card {
+      width: 75%;
+    }
+
+    #work-content {
+        justify-content: center;
+    }
+}
+
+/* Display for phones */
+@media screen and (max-width: 768px) {
+    .card {
+      width: 90%;
+    }
 }
