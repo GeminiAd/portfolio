@@ -22,12 +22,23 @@ header {
     background-color: var(--header-background-color);
 
     display: flex;
+    flex-direction: row;
 
     /* 
      *  The first item in the header - the <h1> header - is positioned on the start line and
      *  the last item - the nav bar - is being placed on the end line.
-     */
+     
     justify-content: space-between;
+    align-items: center;
+    */
+}
+
+#header-title {
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -35,18 +46,27 @@ h1 {
     font-size: 52px;
     font-weight: bold;
 
+    margin: 10px;
+    padding: 15px;
+
     color: white;
 }
 
 header nav {
-    width: 50%;
+    width: 75%;
+    height: 100%;
 
-    /* The navigation bar is positioned on the right side of the header */
+    /* The navigation bar is positioned on the right side of the header. */
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 header nav ul {
+    /* Add some padding and margin so its lined up with the application images. */
+    margin: 10px;
+    padding: 10px;
+
     /* The nav links appear horizontally instead of vertically */
     display: flex;
 }
