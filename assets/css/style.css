@@ -141,6 +141,36 @@ main {
     flex-direction: row;
 }
 
+#about-me figure {
+    /* Line the image of me up with the rest of my project cards. */
+    margin: 1%;
+}
+
+#about-me img {
+    float: left;
+
+    height: 200px;
+
+    margin-right: 20px;
+}
+
+#about-me-text {
+    color: var(--header-background-color);
+}
+
+#about-me-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-bottom: .5em;
+}
+
+#about-me-text p {
+    font-size: 18px;
+
+    margin: .5em 0;
+}
+
 #work {
     display: flex;
     flex-direction: row;
@@ -197,7 +227,11 @@ main {
     filter: brightness(1);
 }
 
-/* The main card is displayed at the top and is larger than the other application cards */
+/* 
+ *  The main card is displayed at the top and is larger than the other application cards.
+ *  I have the main card as a separate class as I may want to apply different styling on the main
+ *  card when the screen is shrunk.
+ */
 .main-card {
     width: 98%;
 
@@ -222,7 +256,7 @@ main {
     filter: brightness(1);
 }
 
-h3 {
+.project-header h3 {
     font-size: 24px;
     font-weight: bold;
 
