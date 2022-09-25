@@ -85,7 +85,33 @@ header a {
     width: 100%;
 }
 
-h2 {
+.hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+
+    /*
+     *  I had to use these two following code blocks to place the banner subheader text in the bottom
+     *  right hand corner of the banner because the image overflows below what is actually displayed.
+     *  Otherwise, I would have used a more elegent solution like calling bottom.
+     *  Instead, I had to position it from the top as those values are fixed.
+     */
+
+    /* Place the text in the bottom-right hand corner, right after the banner */
+    position: absolute;
+    top: 400px;
+    right: 0;
+
+    /* 
+     *  Finally place it in the bottom-right hand corner of the banner.
+     *  These value are used so that the text is indented evenly from the bottom and right sides.
+     */
+    transform: translate(-12%, -150%);
+}
+
+.section-header h2 {
     font-size: 36px;
     font-weight: bold;
 }
