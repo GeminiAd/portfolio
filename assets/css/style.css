@@ -1,7 +1,8 @@
 :root {
-    --background-color: beige;
-    --header-background-color: navy;
-    --header-text-color: white;
+    --background-color: lightgrey;
+    --header-background-color: #231709;
+    --header-text-color: #231709;
+    --header-text-background-color: papayawhip;
     --section-header-color: navy;
     --work-border-color: navy;
     --work-subheader-text-color: white;
@@ -16,21 +17,13 @@ body {
 }
 
 header {
-    height: 100px;
+    height: 150px;
     width: 100%;
 
     background-color: var(--header-background-color);
 
     display: flex;
     flex-direction: row;
-
-    /* 
-     *  The first item in the header - the <h1> header - is positioned on the start line and
-     *  the last item - the nav bar - is being placed on the end line.
-     
-    justify-content: space-between;
-    align-items: center;
-    */
 }
 
 #header-title {
@@ -49,7 +42,8 @@ h1 {
     margin: 10px;
     padding: 15px;
 
-    color: white;
+    background-color: var(--header-text-background-color);
+    color: var(--header-text-color);
 }
 
 header nav {
@@ -84,7 +78,7 @@ a {
 }
 
 header a {
-    color: white;
+    color: var(--header-text-background-color);
 }
 
 .hero {
@@ -109,7 +103,9 @@ header a {
     font-size: 48px;
     font-weight: bold;
 
-    background-color: var(--header-background-color);
+    padding: 10px;
+
+    background-color: var(--header-text-background-color);
     color: var(--header-text-color);
 
     /*
@@ -121,7 +117,7 @@ header a {
 
     /* Place the text in the bottom-right hand corner, right after the banner */
     position: absolute;
-    top: 400px;
+    top: 450px; /* 450px is the hight of the header + height of the hero banner */
     right: 0;
 
     /* 
@@ -161,8 +157,8 @@ main {
     margin: 10px;
     padding: 10px;
 
-    color: var(--section-header-color);
-    border-right: thick solid var(--section-header-color);
+    color: var(--header-background-color);
+    border-right: thick solid var(--header-background-color);
 
     display: flex;
     justify-content: flex-end;
@@ -185,7 +181,7 @@ main {
 
     margin: 1%;
 
-    border: thick solid var(--work-border-color);
+    border: thick solid var(--header-text-background-color);
 }
 
 .card img {
@@ -223,8 +219,8 @@ h3 {
     /* I want the project subheader - the name of the project and the languages it uses - to display over the image of the project */
     transform: translate(0, -150%);
 
-    background-color: var(--work-border-color);
-    color: var(--work-subheader-text-color);
+    background-color: var(--header-text-background-color);
+    color: var(--header-background-color);
 }
 
 .project-header p {
@@ -244,5 +240,5 @@ h3 {
 }
 
 #contact-me-content a {
-    color: var(--section-header-color);
+    color: var(--header-background-color);
 }
