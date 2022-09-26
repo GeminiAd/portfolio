@@ -379,7 +379,7 @@ main {
  *  Here, I need to have each link evenly spaced, so I have to do all justifying within the <ul> element so that
  *  it applies to the children <li> elements with each link.
  */
-#contact-me-content ul {
+address ul {
     /* The height needs to be set to 100% in order to center the content vertically. */
     height: 100%;
 
@@ -390,11 +390,14 @@ main {
     align-items: center;
 }
 
-#contact-me-content ul li {
+address ul li {
     font-size: 24px;
+
+    /* I want the address links text to be slightly bolder than normal but not quite bold. */
+    font-weight: 500;
 }
 
-#contact-me-content a {
+address a {
     color: var(--dark);
 }
 
