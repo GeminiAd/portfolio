@@ -1,11 +1,12 @@
 :root {
+    /* The background color is just something light to provide contrast for the text and images. */
     --background-color: lightgrey;
-    --header-background-color: #231709;
-    --header-text-color: #231709;
-    --header-text-background-color: papayawhip;
-    --section-header-color: navy;
-    --work-border-color: navy;
-    --work-subheader-text-color: white;
+
+    /* The dark color is a dark brown, to match the redwood bark in the banner. */
+    --dark: #231709;
+
+    /* The light color I don't know how to describe, but it matches the light coming through the trees in the banner. */
+    --light: papayawhip;
 }
 
 * {
@@ -16,43 +17,63 @@ body {
     background-color: var(--background-color);
 }
 
+/*
+ *  The header contains two elements:
+ *      1. The <h1> element representing the title of the webpage.
+ *      2. The navigation bar with links to the main sections of the website - About Me, Work, and Contact Me
+ */
 header {
     height: 150px;
     width: 100%;
 
-    background-color: var(--header-background-color);
+    background-color: var(--dark);
 
+    /* This just displays everything in a row. */
     display: flex;
     flex-direction: row;
 }
 
+/* The <h1> element representing the title of the webpage. */
 #header-title {
+    /* The title is 25% of the header's width so it lines up with the main sections below. */
     width: 25%;
+    /* The height is set to 100% so that align-items center can align it vertically. */
     height: 100%;
 
     display: flex;
+    /* Align the title to the right of the container. */
     justify-content: flex-end;
+    /* Center it vertically. */
     align-items: center;
 }
 
+/* Styling for the actual text of the title. */
 h1 {
+    /* As an <h1> header, it needs to be the biggest on the page and bold to stand out. */
     font-size: 52px;
     font-weight: bold;
 
-    margin: 10px;
-    padding: 15px;
+    padding: 15px; /* padding sets how far out the light background will display from the dark text. */
+    margin: 10px; /* Purely cosmetic spacing. */
 
-    background-color: var(--header-text-background-color);
-    color: var(--header-text-color);
+    background-color: var(--light);
+    color: var(--dark);
 }
 
+/* 
+ *  The navigation bar in the upper-right hand corner.
+ *  The nav element just contains an unordered list of links displayed horizontally.
+ */
 header nav {
+    /* The width is set to 75% to match up with the main sections below. */
     width: 75%;
+    /* The height is set to 100% so that align-items will center everything vertically. */
     height: 100%;
 
-    /* The navigation bar is positioned on the right side of the header. */
     display: flex;
+    /* Align the unordered list child element to the right of the container. */
     justify-content: flex-end;
+    /* Center the unordered list child element vertically in the container */
     align-items: center;
 }
 
@@ -72,15 +93,25 @@ header nav ul li {
     font-size: 24px;
 }
 
-/* All links on this page won't be underlined */
+/* 
+ *  All links on this page won't be underlined. I personally think links look better not underlined when
+ *  they are in nav bars, and all the link I have in this page are in nav bars.
+ */
 a {
     text-decoration: none;
 }
 
+/* Links in the header are set to light. */
 header a {
-    color: var(--header-text-background-color);
+    color: var(--light);
 }
 
+/* 
+ *  Contains the styling for the hero banner.
+ *  The hero banner is a figure element with 2 child elements:
+ *      1. An image (the actual banner)
+ *      2. A <figcaption> element with an <h2> child representing the subtitle over the banner.
+ */
 .hero {
     height: 300px;
     width: 100%;
@@ -90,6 +121,7 @@ header a {
     align-items: center;
     justify-content: center;
 
+    /* Any overflow from the image that doesn't fit in its parent container is hidden. */
     overflow: hidden;
 }
 
@@ -99,151 +131,203 @@ header a {
     width: 100%;
 }
 
+/* Contains the styling for the subtitle text over the hero banner. */
 .hero h2 {
+    /* It's still big, but smaller than the title header, and bold. */
     font-size: 48px;
     font-weight: bold;
 
+    /* padding is set to 10 so that the light background color of the subtitle sticks out a little from the text. */
     padding: 10px;
 
-    background-color: var(--header-text-background-color);
-    color: var(--header-text-color);
+    background-color: var(--light);
+    color: var(--dark);
 
     /*
      *  I had to use these two following code blocks to place the banner subheader text in the bottom
      *  right hand corner of the banner because the image overflows below what is actually displayed.
-     *  Otherwise, I would have used a more elegent solution like calling bottom.
+     *  Otherwise, I would have used a more elegent solution like using the bottom property.
      *  Instead, I had to position it from the top as those values are fixed.
      */
 
     /* Place the text in the bottom-right hand corner, right after the banner */
     position: absolute;
-    top: 450px; /* 450px is the hight of the header + height of the hero banner */
+    top: 450px; /* 450px is the hight of the header (150px) + height of the hero banner (300px) */
     right: 0;
 
     /* 
      *  Finally place it in the bottom-right hand corner of the banner.
-     *  These value are used so that the text is indented evenly from the bottom and right sides.
+     *  These values are used so that the text is indented evenly from the bottom and right sides.
      */
     transform: translate(-12%, -150%);
 }
 
+/* Each section label on the left-hand side. */
 .section-header h2 {
+    /* We want these labels bigger and bolder than the other text. */
     font-size: 36px;
     font-weight: bold;
 }
 
+/* 
+ *  The main element contains 2 children:
+ *      1. The section element representing the about me section
+ *      2. The section element representing the work section
+ */
 main {
     width: 100%;
 }
 
-#about-me {
+/* A main section is each of the sections listed below the banner: about-me, work, and contact-me */
+.main-section {
+    /* This makes it so each subsection is displayed horizontally one after the other. */
     display: flex;
     flex-direction: row;
 }
 
 #about-me figure {
-    /* Line the image of me up with the rest of my project cards. */
+    /* Line the image of me up with the rest of my projects. */
     margin: 1%;
 }
 
+/* My image in the about me content window. */
 #about-me img {
+    /* I want the image on the left and the text wrapped around on the right side of the image. */
     float: left;
 
+    /* 
+     *  I don't want my image to be bigger than the project images. The project images should be the biggest since they
+     *  are the focus of this project portfolio.
+     */
     height: 200px;
 
+    /* Put some space in between my image and the description to the right. */
     margin-right: 20px;
 }
 
+/* The general text in the about me content container. */
 #about-me-text {
-    color: var(--header-background-color);
+    color: var(--dark);
 }
 
+/* My name in the about me content container. */
 #about-me-text h3 {
+    /* I want my name a little bit bigger and bolder than the description text. */
     font-size: 24px;
     font-weight: bold;
 
     margin-bottom: .5em;
 }
 
+/* The description of myself in the about me content container */
 #about-me-text p {
+    /* The text is slightly bigger as I needed to fill the space. */
     font-size: 18px;
 
     margin: .5em 0;
 }
 
-#work {
-    display: flex;
-    flex-direction: row;
-}
-
-#contact-me {
-    display: flex;
-    flex-direction: row;
-}
-
+/* 
+ *  Styling for each of the main section's headers. The headers are the descriptions of each of the main section's content.
+ *  The header for the about-me main section is "About Me", the header for the work section is "Work", and the header for the
+ *  contant-me section is "Contact Me".
+ *  A section-header is a <section> element with 1 child <h2> element.
+ */
 .section-header {
+    /* Each of the headers are only going to take up 25% of the width of each main section. */
     width: 25%;
 
+    /* Offset each header from its containing box to make it look nicer. */
     margin: 10px;
     padding: 10px;
 
-    color: var(--header-background-color);
-    border-right: thick solid var(--header-background-color);
+    color: var(--dark);
+    border-right: thick solid var(--dark); /* I want that thick border wall to the right of About Me, Work, etc. */
 
+    /* Align each header to the right side. */
     display: flex;
     justify-content: flex-end;
 }
 
+/* 
+ *  Styling for the content boxes for each of the main sections.
+ *  Since each section's content is displayed a little bit differently, there's not much code here.
+ */
 .section-content {
+    /* I want the content to take up the last 75% of the width of each main section. */
     width: 75%;
 
+    /* Offset each header from its containing box to make it look nicer. */
     margin: 10px;
     padding: 10px;
 }
 
+/* This is the section that contains all of my projects. */
 #work-content {
+    /* I want all my projects to wrap to the next row if they can't display on the same row. */
     display: flex;
     flex-wrap: wrap;
 }
 
-.card {
-    width: 48%;
+/* 
+ *  The main project is displayed at the top and is larger than the other projects.
+ *  I have the main project as a separate class than project as I may want to apply different styling on 
+ *  the main project when the screen is shrunk.
+ */
+ .main-project {
+    width: 98%;
 
+    /* The margin displays on both sides of the container, so 1% + 98%width + 1% = 100% of the width of the parent container. */
     margin: 1%;
 
-    border: thick solid var(--header-text-background-color);
+    /* I want the top to be flush with the "Work" Header. */
+    margin-top: 0;
+
+    /* I also want a thick border around each project of our light color. */
+    border: thick solid var(--light);
 }
 
-.card img {
+/*
+ *  The styling for the image of the main project.
+ *  I know this shares styling with the other project images, but I would like to keep them separate in case I
+ *  need to style the images differently in the future based on media queries.
+ */
+.main-project img {
     width: 100%;
     height: 100%;
 
+    /* The project image is darker until your mouse hovers over it, then the image turns brighter. */
     filter: brightness(60%);
-
     transition: filter 1s;
 }
 
-.card img:hover {
+/* This is where turning up the brightness on hover of the project image is implemented. */
+.main-project img:hover {
     filter: brightness(1);
 }
 
 /* 
- *  The main card is displayed at the top and is larger than the other application cards.
- *  I have the main card as a separate class as I may want to apply different styling on the main
- *  card when the screen is shrunk.
+ *  A class representing each project in the work-content section.
+ *  Each project is smaller than the main project.
+ *  The project class is a figure element with 2 children:
+ *      1. An <a> element with a child <img> representing the project image
+ *      2. A <figcaption> element with the project-description class
  */
-.main-card {
-    width: 98%;
+.project {
+    /* Each project should take up 50% of the available width (48%width + 1%width margin-left + 1%width margin-right) */
+    width: 48%;
 
     margin: 1%;
 
-    /* I want the top to be flush with the "Work" Header */
-    margin-top: 0;
-
-    border: thick solid var(--header-text-background-color);
+    border: thick solid var(--light);
 }
 
-.main-card img {
+/*
+ *  The styling for the images of the each project.
+ *  I know this shares styling with the main project image, but I would like to keep them separate in case I
+ *  need to style the images differently in the future based on media queries.
+ */
+.project img {
     width: 100%;
     height: 100%;
 
@@ -252,38 +336,57 @@ main {
     transition: filter 1s;
 }
 
-.main-card img:hover {
+.project img:hover {
     filter: brightness(1);
 }
 
-.project-header h3 {
+/*
+ *  The project-description class is a figcaption element with two child elements:
+ *      1. An <h3> element with a class of project-title representing the title of the project.
+ *      2. A <p> element with a class of project-languages representing the languages the project uses.
+ */
+.project-description {
+    /* This makes it so that the background box is set to fit the text */
+    width: max-content;
+
+    /* Some padding to make the background box extend out from the text. */
+    padding: 10px;
+
+    /* Move the project description over the image of the project instead of under it. */
+    transform: translate(0, -150%);
+
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.project-title {
     font-size: 24px;
     font-weight: bold;
 
+    /* Put some space in between the project title and project languages. */
     margin: 5px;
 }
 
-.project-header {
-    width: max-content;
-
-    padding: 10px;
-
-    /* I want the project subheader - the name of the project and the languages it uses - to display over the image of the project */
-    transform: translate(0, -150%);
-
-    background-color: var(--header-text-background-color);
-    color: var(--header-background-color);
-}
-
-.project-header p {
+.project-languages {
+    /* Put some space in between the project title and project languages. */
     margin: 5px;
 }
 
+/* 
+ *  The unordered list representing links to contact me at.
+ *  ALSO OF NOTE: 
+ *  In the nav bar at the top of the page, I set the display to flex and did all aligning with the nav element.
+ *  Here, I need to have each link evenly spaced, so I have to do all justifying within the <ul> element so that
+ *  it applies to the children <li> elements with each link.
+ */
 #contact-me-content ul {
+    /* The height needs to be set to 100% in order to center the content vertically. */
     height: 100%;
 
     display: flex;
+    /* Space each link evenly along the horizontal axis. */
     justify-content: space-evenly;
+    /* Center each item vertically. */
     align-items: center;
 }
 
@@ -292,23 +395,36 @@ main {
 }
 
 #contact-me-content a {
-    color: var(--header-background-color);
+    color: var(--dark);
 }
 
-/* Display for tablets */
+/* 
+ *  Display for tablets.
+ *  When the screen width gets below a certain size, we display all the projects in a column.
+ *  We can accomplish this because the #work-content section is set to flex-wrap: wrap, so when the width of each
+ *  project is set to something greater than 50%, only one may be displayed per row.
+ */
 @media screen and (max-width: 992px) {
-    .card {
+    .project {
       width: 75%;
     }
 
+    /* Each project needs to be centered horizontally now or they will all be aligned to the left. */
     #work-content {
         justify-content: center;
     }
 }
 
-/* Display for phones */
+/* 
+ *  Display for phones.
+ *  Same concept as above.
+ */
 @media screen and (max-width: 768px) {
-    .card {
+    .project {
       width: 90%;
+    }
+
+    #work-content {
+        justify-content: center;
     }
 }
