@@ -408,13 +408,22 @@ address a {
  *  project is set to something greater than 50%, only one may be displayed per row.
  */
 @media screen and (max-width: 992px) {
-    .project {
-      width: 75%;
-    }
-
     /* Each project needs to be centered horizontally now or they will all be aligned to the left. */
     #work-content {
-        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        height: 2400px;
+    }
+
+    .project {
+        width: 98%;
+
+        flex: 1;
+    }
+
+    .main-project {
+        flex: 2;
     }
 }
 
