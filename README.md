@@ -1,16 +1,17 @@
 <h1 align="center">
-  Project Portfolio
+  <a href="https://geminiad.github.io/project-portfolio">Project Portfolio</a>
   <br>
 </h1>
 
 <p align="center">
   <a href="#description">Description</a> •
   <a href="#key-features">Key Features</a> •
-  <a href="#usage">Usage</a>
+  <a href="#usage">Usage</a> •
+  <a href="#credits">Credits</a>
 </p>
 
-![website screenshot top](assets/images/portfolio-screenshot1.png)
-![website screenshot bottom](assets/images/portfolio-screenshot2.png)
+![website screenshot top](assets/images/project-portfolio-screenshot-upper.png)
+![website screenshot bottom](assets/images/project-portfolio-screenshot-lower.png)
 
 ## Description 
 As an aspiring developer, I need to have a portfolio to showcase my work. Having several deployed projects is a minimum requirement to receive an initial interview at many companies. My project portfolio must meet the following criteria:
@@ -39,11 +40,18 @@ WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 ```
 
-This site satisfies that criteria in an ascethically pleasing design, and was created by me from scratch.
-
 ## Key Features
+This website was created entirely by me using HTML/CSS.
 
-### Responsive Design
-The layout of the website changes based on the screen width.
+There's a navigation bar at the top with links to each of the three sections: the about me section, the section showcasing my work, and the contact 
+me section. The about me section has a recent picture of me, my name, and a short description of me, including my skills. The work section showcases my work: I have my most recent project displayed larger than the other projects on the top row. The other projects are displayed below the most recent project, with two projects per row. Whenever you hover over an image of my project it brightens up the image as if you are selecting it. Each project image, when clicked, takes you to the deployed application - or, in the case of placeholder projects, just takes you to a placeholder image. The contact me section has some links to contact me.
+
+This website also boasts a responsive design. On smaller resolutions - indicative of viewing this site on a tablet or smaller - I reduced some of the text and image sizes so the site doesn't look broken. It should look good when viewed on a desktop, laptop, tablet, or smart phone.
 
 ## Usage 
+Navigate to:
+https://geminiad.github.io/project-portfolio
+
+## Credits
+All code contained in style.css and index.html
+© 2022 Adam Ferro
