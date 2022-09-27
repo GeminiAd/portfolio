@@ -471,7 +471,7 @@ address a {
         align-items: flex-end;
     }
 
-    /* As the resolution gets low, there's a space in between the hero image and the header. */
+    /* As the resolution gets low, there's a space in between the hero image and the header. Adjust the height to fix that. */
     .hero img {
         height: 100%;
         width: auto;
