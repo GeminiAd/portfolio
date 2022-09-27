@@ -50,7 +50,7 @@ header {
 /* Styling for the actual text of the title. */
 h1 {
     /* As an <h1> header, it needs to be the biggest on the page and bold to stand out. */
-    font-size: 52px;
+    font-size: 48px;
     font-weight: bold;
 
     padding: 15px; /* padding sets how far out the light background will display from the dark text. */
@@ -134,7 +134,7 @@ header a {
 /* Contains the styling for the subtitle text over the hero banner. */
 .hero h2 {
     /* It's still big, but smaller than the title header, and bold. */
-    font-size: 48px;
+    font-size: 46px;
     font-weight: bold;
 
     /* padding is set to 10 so that the light background color of the subtitle sticks out a little from the text. */
@@ -403,40 +403,55 @@ address a {
 
 /* 
  *  Display for tablets.
- *  When the screen width gets below a certain size, we display all the projects in a column.
- *  We can accomplish this because the #work-content section is set to flex-wrap: wrap, so when the width of each
- *  project is set to something greater than 50%, only one may be displayed per row.
+ *  For tablets, I'm making the conscious design decision to have everything mostly the same, except make
+ *  certain elements smaller, such as the project image sizes and the header texts.
  */
 @media screen and (max-width: 992px) {
-    /* Each project needs to be centered horizontally now or they will all be aligned to the left. */
-    #work-content {
-        flex-direction: column;
-        flex-wrap: nowrap;
+    /* 
+     *  Any smaller than this width and the title of this project portfolio starts to get clipped off the page, so
+     *  I'm just going to align it to the left of the header.
+     */
+    #header-title {
+        justify-content: flex-start;
+    }
 
-        height: 2400px;
+    h1 {
+        font-size: 46px;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .section-header h2 {
+        font-size: 30px;
     }
 
     .project {
-        width: 98%;
-
-        flex: 1;
+        height: 200px;
     }
 
     .main-project {
-        flex: 2;
+        height: 400px;
     }
 }
 
 /* 
  *  Display for phones.
- *  Same concept as above.
+ *  When displaying on smart phones, I'm going to have all of my projects displayed vertically.
  */
 @media screen and (max-width: 768px) {
-    .project {
-      width: 90%;
+    .section-header h2 {
+        font-size: 28px;
     }
 
-    #work-content {
-        justify-content: center;
+    /* Each project will now take up the whole width so the projects are displayed vertically. */
+    .project {
+        width: 98%;
+        height: 250px;
+    }
+
+    .main-project {
+        height: 350px;
     }
 }
