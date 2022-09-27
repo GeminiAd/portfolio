@@ -49,10 +49,11 @@ me section. The about me section has a recent picture of me, my name, and a shor
 This website also boasts a responsive design. On smaller resolutions - indicative of viewing this site on a tablet or smartphones - I reduced some of the text and image sizes so the site doesn't look broken. It should look good when viewed on a desktop, laptop, tablet, or smart phone.
 
 ## Usage 
+This project portfolio looks beautiful on desktops and tablets!
+It looks pretty good on smartphones as well! I would encourage you to view it on a desktop, a tablet, and a smartphone to see its full responsiveness.
+
 Navigate to:
 <a href="https://geminiad.github.io/project-portfolio" target="_blank">https://geminiad.github.io/project-portfolio</a>
-This project portfolio looks beautiful on desktops and tablets!
-It looks pretty good on smartphones as well! I would encourage you to view it on your smartphone if you have one.
 
 ## Credits
 All code contained in style.css and index.html
