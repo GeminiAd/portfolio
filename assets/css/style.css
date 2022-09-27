@@ -246,7 +246,9 @@ main {
 
     /* Align each header to the right side. */
     display: flex;
-    justify-content: flex-end;
+    /* I want to display each work on top of each other */
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 /* 
@@ -457,6 +459,18 @@ address a {
         font-size: 26px;
     }
 
+    /* 
+     *  On a smartphone resolution, the title overlaps the nav bar, so I'll place the nav bar and the title so they offset
+     *  from the center.
+     */
+    #header-title {
+        align-items: flex-start;
+    }
+
+    header nav {
+        align-items: flex-end;
+    }
+
     /* As the resolution gets low, there's a space in between the hero image and the header. */
     .hero img {
         height: 100%;
@@ -472,7 +486,7 @@ address a {
     }
 
     .section-header h2 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #about-me img {
@@ -480,11 +494,11 @@ address a {
     }
 
     #about-me-text h3 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #about-me-text p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .project {
@@ -496,6 +510,6 @@ address a {
     }
 
     address ul li {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
