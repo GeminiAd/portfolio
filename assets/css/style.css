@@ -486,7 +486,7 @@ address a {
     }
 
     .section-header h2 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     #about-me img {
@@ -510,6 +510,6 @@ address a {
     }
 
     address ul li {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
