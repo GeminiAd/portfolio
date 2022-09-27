@@ -427,6 +427,11 @@ address a {
         font-size: 30px;
     }
 
+    /* I have to reduce the size of the links on the address bar as it gets too crowded at low screen resolutions. */
+    address ul li {
+        font-size: 20px;
+    }
+
     .project {
         height: 200px;
     }
