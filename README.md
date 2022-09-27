@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://geminiad.github.io/project-portfolio">Project Portfolio</a>
+  <a href="https://geminiad.github.io/project-portfolio" target="_blank">Project Portfolio</a>
   <br>
 </h1>
 
@@ -50,7 +50,7 @@ This website also boasts a responsive design. On smaller resolutions - indicativ
 
 ## Usage 
 Navigate to:
-https://geminiad.github.io/project-portfolio
+<a href="https://geminiad.github.io/project-portfolio" target="_blank">https://geminiad.github.io/project-portfolio</a>
 
 ## Credits
 All code contained in style.css and index.html
