@@ -403,15 +403,15 @@ address a {
 
 /* 
  *  Display for tablets.
- *  For tablets, I'm making the conscious design decision to have everything mostly the same, except make
- *  certain elements smaller, such as the project image sizes and the header texts.
+ *  When displaying on tablets, I need to shrink some of the header text so the layout doesn't break. Also, I'm going to display one project
+ *  per row and the first project will have a bigger height than the rest of the images
  */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
     /* 
      *  Any smaller than this width and the title of this project portfolio starts to get clipped off the page, so
      *  I'm just going to align it to the left of the header.
      */
-    #header-title {
+     #header-title {
         justify-content: flex-start;
     }
 
@@ -424,30 +424,12 @@ address a {
     }
 
     .section-header h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     /* I have to reduce the size of the links on the address bar as it gets too crowded at low screen resolutions. */
     address ul li {
         font-size: 20px;
-    }
-
-    .project {
-        height: 200px;
-    }
-
-    .main-project {
-        height: 400px;
-    }
-}
-
-/* 
- *  Display for phones.
- *  When displaying on smart phones, I'm going to have all of my projects displayed vertically.
- */
-@media screen and (max-width: 768px) {
-    .section-header h2 {
-        font-size: 28px;
     }
 
     /* Each project will now take up the whole width so the projects are displayed vertically. */
@@ -458,5 +440,62 @@ address a {
 
     .main-project {
         height: 350px;
+    }
+}
+
+/* 
+ *  Mobile landscape resolution. 
+ *  This is resolution you see when you view the page on a mobile phone and turn it sideways.
+ *  Hopefully, this makes the site readable on a mobile phone; it's hard for me to test this
+ *  width out as chrome goes down to 500px width minimum.
+ *
+ *  Also of note: the cutoff for mobile landscape is 480px and the cutoff for mobile portrait is 360px.
+ *  Why am I using 520px here? Chrome only scales down to 500px, so it's set to 520px for testing purposes.
+ */
+@media screen and (max-width: 520px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    /* As the resolution gets low, there's a space in between the hero image and the header. */
+    .hero img {
+        height: 100%;
+        width: auto;
+    }
+
+    header nav ul li {
+        font-size: 18px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .section-header h2 {
+        font-size: 16px;
+    }
+
+    #about-me img {
+        height: 150px;
+    }
+
+    #about-me-text h3 {
+        font-size: 16px;
+    }
+
+    #about-me-text p {
+        font-size: 14px;
+    }
+
+    .project {
+        height: 150px;
+    }
+
+    .main-project {
+        height: 250px;
+    }
+
+    address ul li {
+        font-size: 16px;
     }
 }
