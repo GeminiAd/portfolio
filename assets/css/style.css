@@ -504,10 +504,6 @@ address a {
 
     #about-me img {
         height: 150px;
-
-        /* Let's not have the text about me float to the right of my picture since the screen is so small */
-        float: none;
-        margin-bottom: 5px;
     }
 
     #about-me-text h3 {
