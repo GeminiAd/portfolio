@@ -51,6 +51,8 @@ This website also boasts a responsive design. On smaller resolutions - indicativ
 ## Usage 
 Navigate to:
 <a href="https://geminiad.github.io/project-portfolio" target="_blank">https://geminiad.github.io/project-portfolio</a>
+This project portfolio looks beautiful on desktops and tablets!
+Its... functional on smartphones.
 
 ## Credits
 All code contained in style.css and index.html

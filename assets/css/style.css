@@ -429,6 +429,11 @@ address a {
         font-size: 28px;
     }
 
+    .project-title {
+        font-size: 22px;
+    }
+
+
     /* I have to reduce the size of the links on the address bar as it gets too crowded at low screen resolutions. */
     address ul li {
         font-size: 20px;
@@ -459,16 +464,24 @@ address a {
         font-size: 26px;
     }
 
+    header {
+        flex-direction: column;
+    }
+
     /* 
-     *  On a smartphone resolution, the title overlaps the nav bar, so I'll place the nav bar and the title so they offset
-     *  from the center.
+     *  On a smartphone resolution, the title overlaps the nav bar.
+     *  To fix this, I'll just center the title over the nav bar.
      */
     #header-title {
-        align-items: flex-start;
+        width: 100%;
+
+        justify-content: center;
     }
 
     header nav {
-        align-items: flex-end;
+        width: 100%;
+
+        justify-content: center;
     }
 
     /* As the resolution gets low, there's a space in between the hero image and the header. Adjust the height to fix that. */
@@ -486,7 +499,7 @@ address a {
     }
 
     .section-header h2 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     #about-me img {
@@ -503,6 +516,14 @@ address a {
 
     .project {
         height: 150px;
+    }
+
+    .project-title {
+        font-size: 18px;
+    }
+
+    .project-languages {
+        font-size: 12px;
     }
 
     .main-project {
