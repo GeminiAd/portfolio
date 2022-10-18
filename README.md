@@ -1,44 +1,19 @@
-<h1 align="center">
-  <a href="https://geminiad.github.io/project-portfolio" target="_blank">Project Portfolio</a>
-  <br>
-</h1>
+# Project Porfolio
 
-<p align="center">
-  <a href="#description">Description</a> •
-  <a href="#key-features">Key Features</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#credits">Credits</a>
-</p>
+<https://geminiad.github.io/project-portfolio>
 
-![website screenshot top](assets/images/project-portfolio-screenshot-upper.png)
-![website screenshot bottom](assets/images/project-portfolio-screenshot-lower.png)
+
+<a href="#description">Description</a> •
+<a href="#key-features">Key Features</a> •
+<a href="#usage">Usage</a> •
+<a href="#author">Author</a>
+
+
+![Project Portfolio Animated Demo](./assets/images/project-portfolio-demo.gif)
+
 
 ## Description 
-As an aspiring developer, I need to have a portfolio to showcase my work. Having several deployed projects is a minimum requirement to receive an initial interview at many companies. My project portfolio must meet the following criteria:
-
-### User Story
-```
-AS AN employer
-I WANT to view a potential employee's deployed portfolio of work samples
-SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
-```
-
-### Acceptance Criteria
-```
-GIVEN I need to sample a potential employee's previous work
-WHEN I load their portfolio
-THEN I am presented with the developer's name, a recent photo, and links to sections about them, their work, and how to contact them
-WHEN I click one of the links in the navigation
-THEN the UI scrolls to the corresponding section
-WHEN I click on the link to the section about their work
-THEN the UI scrolls to a section with titled images of the developer's applications
-WHEN I am presented with the developer's first application
-THEN that application's image should be larger in size than the others
-WHEN I click on the images of the applications
-THEN I am taken to that deployed application
-WHEN I resize the page or view the site on various screens and devices
-THEN I am presented with a responsive layout that adapts to my viewport
-```
+This is just a simple website that shows off the applications that I have worked on. It also shows off my css skills, as this website is all HTML/CSS, no JavaScript.
 
 ## Key Features
 This website was created entirely by me using HTML/CSS.
@@ -55,6 +30,8 @@ It looks pretty good on smartphones as well! I would encourage you to view it on
 Navigate to:
 <a href="https://geminiad.github.io/project-portfolio" target="_blank">https://geminiad.github.io/project-portfolio</a>
 
-## Credits
-All code contained in style.css and index.html
-© 2022 Adam Ferro
+## Author
+
+Adam Ferro
+- [Github](https://github.com/GeminiAd)
+- [Linked-In](https://www.linkedin.com/in/adam-ferro)
