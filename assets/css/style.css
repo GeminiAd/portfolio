@@ -296,7 +296,7 @@ main {
     /* I also want a thick border around each project of our light color. */
     border: thick solid var(--light);
 
-    object-fit: contain;
+    object-fit: cover;
     overflow: hidden;
 }
 
@@ -437,6 +437,16 @@ p {
 
     #header-title {
         justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .project {
+        height: 200px;
+    }
+
+    .main-project {
+        height: 375px;
     }
 }
 
@@ -588,10 +598,10 @@ p {
     }
 
     .main-project {
-        height: 200px;
+        height: 175px;
     }
 
     address ul li {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
